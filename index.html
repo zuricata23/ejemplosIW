@@ -1,0 +1,52 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!--
+       CSS GRID
+
+       Layout: geometría que calcula el navegador para saber donde colocar cada
+       elemento y que tanto separado esta de los demás elementos 
+       
+       Flexbox permite organizar elementos en un solo eje, aunque tiene dos ejes solamente es para alineación.
+
+       CSS Grid, permite colocar elementos en dos ejes (horizontal - inline- y vertical -block-).
+
+       No importa la posición de un elemento en el código HTML para el Layout
+
+       Requiere una relación de padre e hijo (gridcontainer y griditems)
+
+       display: grid | inline-grid
+        
+       grid-items
+         hijos directos 
+         pseudoelementos ::before y ::Iafter
+         texto
+
+       Elementos que no existen en el DOM, se crean por el navegador para
+       colocar elementos
+       
+       GRID tiene una representación tabular
+
+       grid-tracks (filas y columnas)
+       grid-lines: separador de filas o columnas
+       grid-cell: intersección de fila y columna
+       grid-areas: cualquier área rectacgular delimitado por 4 lineas
+    --> 
+    <header class="block">header</header>    
+    <div class="feature block">1</div>
+    <div class="feature block">2</div>
+    <div class="feature block">3</div>
+    <aside class="block">aside</aside>
+    <main class="block">main</main>
+    <footer class="block">footer</footer>        
+</body>
+</html>
