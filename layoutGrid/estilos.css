@@ -1,68 +1,68 @@
-/*
-.container{
-   display: grid;
-   height: 300px;
-   background-color: yellow;
-   font-size: 2em;
-   grid-template-columns: 1fr 1fr 1fr 1fr; 
-   grid-template-rows: 1fr 1fr 1fr;
-   grid-column-gap:1em;
-   grid-row-gap: 0.5em;
-}
-
-.item {
-  background: pink;  
-}
-
-.item:nth-child(even){
-   background: cyan; 
-}
-*/
 
 body{
    display: grid; 
    min-height: 100vh;
-   grid-template-columns: repeat(12, 1fr);
-   grid-template-rows: 4em 6em 1fr 4em;
+   /* Creación de áreas para organizar el contenido, en este
+      caso cada contenedor dentro del body ocupa una columna,
+      considerando que el GRID tiene una columna. Esta configuración
+      se utiliza en el redimensionamiento de la página
+       */
+   grid-template-areas: 'header' 'aside' 'main' 'footer';
+   /* se especifican las filas que tendrá el grid */
+   grid-template-rows: 4em 1fr 4em;
    grid-gap:0.3em;
 }
 
 aside{
+  /* Se especifica que área definida en el grid-template-areas ocupará el
+     aside */
+  grid-area: aside;
   background: hsl(200, 100%, 60%);
-  grid-row: 3;
-  grid-column: span 3;
 }
 
 footer{
+   /* Se especifica que área definida en el grid-template-areas ocupará el
+     footer */
+   grid-area:footer;
     background: hsl(300, 100%,60%);
-    /*grid-row: grid-row-start/grid-row-end
-      grid-column:grid-column-star/grid-column-end
-    */
-    /*grid-row-start: 3;*/
-    grid-column:1/span 12;    
   }
 
  main{
+    /* Se especifica que área definida en el grid-template-areas ocupará el
+     main */
+    grid-area:main;
     background: hsl(150, 100%,60%);
-    grid-row:3;
-    grid-column:span 9;
   }
 
   header{
-    background: hsl(100, 100%,60%);
-    grid-column:1/span 12;    
+    /* Se especifica que área definida en el grid-template-areas ocupará el
+     header */
+    grid-area:header;
+    background: hsl(100, 100%,60%);        
   }
 
-  
-  .feature{
-    background: hsl(270,100%,70%);
-    grid-column: span 4;
-  }
-
-  
   .block {
+    /* Regla CSS que permite centrar el contenido en cada uno de los 
+      contenedores */
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+
+  /* Regla responsive para acomodar los contenedores cuando se tenga
+     como mínimo una resolución de 1024px de ancho */
+  @media screen and (min-width: 1024px){
+    body{
+      display: grid; 
+      min-height: 100vh;
+      grid-template-areas: 'header header'
+                           'aside main' 
+                           'footer footer';
+      grid-template-columns: 3fr 1fr;
+      grid-template-rows: 4em 1fr 4em;
+      grid-gap:0.3em;
+    }
+   
   }
   
