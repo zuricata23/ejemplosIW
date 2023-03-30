@@ -1,0 +1,41 @@
+s<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de formulario en HTML5</title>
+    <link rel="stylesheet" href="estilos.css">
+    
+</head>
+<body>
+   <header id="header">
+      <h1>Formulario de ejemplo</h1>
+      <p>Validación del lado FrontEnd</p>      
+   </header> 
+
+   <!--Por el momento dejar los atributos action y method sin valor-->
+   <form id="form" action="" method="">
+      <fieldset class="bloque-uno">
+         <legend>Información personal</legend>
+         <label for="first-name">Nombre <input id="first-name" name="first-name" type="text" /></label>
+         <label for="CURP">CURP <input type="text" id="CURP" name="CURP" pattern="([A-Z][AEIOUX][A-Z]{2}\d{2}(?:0\d|1[0-2])(?:[0-2]\d|3[01])[HM](?:AS|B[CS]|C[CLMSH]|D[FG]|G[TR]|HG|JC|M[CNS]|N[ETL]|OC|PL|Q[TR]|S[PLR]|T[CSL]|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[A-Z\d])(\d)"></label>
+        <label for="email">Email <input id="email" name="email" type="email" /></label>
+       
+        <label for="carrera">Carrera solicitada 
+         <select id="carrera" name="carrera">
+           <option value="">Seleccione una ...</option>
+           <option value="1">Ingeniería en sistemas.</option>
+           <option value="2">Ingeniería Telemática</option>
+           <option value="3">Inteligencia Artificial.</option>
+         </select>
+       </label>
+       <button id="btn">
+        Enviar
+       </button>
+        
+      </fieldset>
+   </form>
+   <script src="gestionDOM.js"></script>
+</body>
+</html>
