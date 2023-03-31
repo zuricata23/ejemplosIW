@@ -80,6 +80,14 @@ select {
     align-items: center;
 }
 
+#resultado {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+#resultado.ok {
+    background-color: green;
+}
 
 @media screen and (max-width: 900px) {
     header {height: 15%;}

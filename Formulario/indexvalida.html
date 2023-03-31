@@ -15,11 +15,12 @@ s<!DOCTYPE html>
    </header> 
 
    <!--Por el momento dejar los atributos action y method sin valor-->
-   <form id="form" action="" method="">
+   <form id="form"  method="">
       <fieldset class="bloque-uno">
          <legend>Información personal</legend>
-         <label for="first-name">Nombre <input id="first-name" name="first-name" type="text" /></label>
-         <label for="CURP">CURP <input type="text" id="CURP" name="CURP" pattern="([A-Z][AEIOUX][A-Z]{2}\d{2}(?:0\d|1[0-2])(?:[0-2]\d|3[01])[HM](?:AS|B[CS]|C[CLMSH]|D[FG]|G[TR]|HG|JC|M[CNS]|N[ETL]|OC|PL|Q[TR]|S[PLR]|T[CSL]|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[A-Z\d])(\d)"></label>
+         <label for="nombre">Nombre <input id="nombre" name="nombre" type="text" required oninput="handlerInputNombre(this)" placeholder="solo letras" /></label>
+         <label for="curp">CURP <input type="text" id="curp" name="curp" required oninput="handlerInputCurp(this)"></label>
+         <!--<pre id="resultado"></pre>-->
         <label for="email">Email <input id="email" name="email" type="email" /></label>
        
         <label for="carrera">Carrera solicitada 
