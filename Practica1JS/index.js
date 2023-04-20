@@ -1,3 +1,10 @@
+/**
+ * Referencias de funciones anónimas, funciones flecha vs funciones normales
+ * 
+ * https://www.neoguias.com/funciones-flecha-es6/#Que_son_las_Funciones_Flecha
+ * https://ed.team/blog/arrow-functions-en-javascript
+ */
+
 
 /**
  * Archivo que contiene las funciones que implementan la funcionalidad
