@@ -77,7 +77,7 @@ function ejecutar(){
    // seleccionados
    curso = buscarCurso(cursos, "C1");
    guardarCursoSel(curso);
-   curso = buscarCurso(cursos, "C3");
+   curso = buscarCurso(cursos, "C4");
    guardarCursoSel(curso);
    // se Invoca mostrarCursosSel de gestionarCursos.js
    mostrarCursosSel(cursosSeleccionados);
