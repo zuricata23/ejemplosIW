@@ -1,0 +1,1 @@
+Ejemplo del consumo de promesas mediante fetch
