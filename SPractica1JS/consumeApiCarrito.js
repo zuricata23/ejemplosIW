@@ -1,5 +1,9 @@
-import {mostrarCursos, buscarCurso, mostrarCursosSel, calcularTotalPago} from './gestionCursos.js'
+import {mostrarCatalogo} from './modulos/catalogo.js'
+/*import {mostrarCursosSel, calcularTotalPago, eliminarItem} from './modulos/carrito.js'*/
 
+/**
+ * Array de elementos de la lista a ofertar
+ */
 let cursos = [
     {
      nombre: "HTML",
@@ -24,10 +28,17 @@ let cursos = [
       clave: "C4",
       duracion: "10 hrs",
       precio: 800
-     }         
+     },        
+     {
+        nombre: "Javasript",
+        clave: "C5",
+        duracion: "10 hrs",
+        precio: 800
+       }          
 ] 
 
 let cursosSeleccionados = [];
+
 let usuario = {
     nombre: "Usuario 1",
     correo:"usuario1@gmail.com",
@@ -55,20 +66,6 @@ function finalizarCompra(){
 
 function ejecutar(){
    let curso;     
-   
-   // Se invoca mostraCursos de gestionarCursos.js
-   mostrarCursos(cursos);
-   // Se selecciona dos cursos del listado 
-   // y se guarda en el array de cursos
-   // seleccionados
-   curso = buscarCurso(cursos, "C1");
-   guardarCursoSel(curso);
-   curso = buscarCurso(cursos, "C4");
-   guardarCursoSel(curso);
-   // se Invoca mostrarCursosSel de gestionarCursos.js
-   mostrarCursosSel(cursosSeleccionados);
-   // Se invoca finalizar compra de gestionarCursos.js
-   finalizarCompra();
+   mostrarCatalogo(cursos,"#catalogo");
 
-   return;
 }
